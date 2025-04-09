@@ -1,161 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Método PHP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Gabriel Silva | Marketing & PNL</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      background-image: url('https://cdn.pixabay.com/photo/2023/01/06/18/39/startup-7701867_1280.jpg');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .background {
+      background-image: url('https://raw.githubusercontent.com/seuusuario/seurepositorio/main/WhatsApp%20Image%202025-04-09%20at%2017.43.58.jpeg');
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
-      color: #fff;
-      line-height: 1.6;
+      position: relative;
+      height: 100%;
+      width: 100%;
     }
-    header {
-      background: rgba(0, 0, 0, 0.85);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
+
+    .overlay {
+      position: absolute;
       top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      color: #FF5C00;
-      font-size: 1.5rem;
-    }
-    nav a {
-      color: #fff;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: #FF5C00; }
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      color: #FF5C00;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
+      left: 0;
+      height: 100%;
+      width: 100%;
       background: rgba(0, 0, 0, 0.7);
-      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #ddd;
       margin-bottom: 2rem;
+      max-width: 600px;
     }
-    .section h3 {
-      color: #FF5C00;
-      margin-bottom: 1rem;
+
+    iframe {
+      width: 90%;
+      max-width: 600px;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
-    .section ul li {
-      margin-bottom: 0.5rem;
-    }
-    .cta {
-      text-align: center;
-      background: #FF5C00;
-      color: #000;
-      padding: 3rem 2rem;
-    }
-    .cta h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .cta a {
-      background: #000;
-      color: #FF5C00;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-    }
-    footer {
-      background: rgba(0, 0, 0, 0.85);
-      color: #aaa;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      iframe {
+        height: 500px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Método PHP</h1>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#mentorias">Mentorias</a>
-      <a href="#ebook">E-book</a>
-      <a href="#beneficios">Benefícios</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Posicione. Atraia. Converta.</h2>
-    <p>O MÉTODO PHP é a estratégia definitiva para empreendedores e marcas que querem vender com autoridade e alcançar resultados extraordinários.</p>
-  </section>
-
-  <section id="sobre" class="section">
-    <h3>O que é o Método PHP?</h3>
-    <p>Baseado em três pilares fundamentais – Produto certo, Hora certa e Público certo – o Método PHP foi criado para alavancar negócios através de posicionamento estratégico e comunicação eficaz. Com técnicas de marketing e PNL, você aprende a conectar sua oferta com o cliente ideal no momento ideal.</p>
-  </section>
-
-  <section id="mentorias" class="section">
-    <h3>Nossas Mentorias</h3>
-    <p>Com o Método PHP, já impactamos mais de <strong>150 alunos</strong> que aplicaram estratégias personalizadas e alcançaram crescimento real e escalável em seus negócios. Em nossas mentorias, desenvolvemos planos de ação baseados nos pilares do PHP, com foco total em:</p>
-    <ul>
-      <li>🔍 Identificação do produto certo para o seu público.</li>
-      <li>⏰ Posicionamento estratégico no momento ideal.</li>
-      <li>🎯 Comunicação persuasiva para atrair o cliente certo.</li>
-    </ul>
-    <p>Mentorias individuais e em grupo disponíveis sob agendamento.</p>
-  </section>
-
-  <section id="ebook" class="section">
-    <h3>Nosso E-book Exclusivo</h3>
-    <p>Quer ter um gostinho do Método PHP e começar sua transformação ainda hoje? Adquira nosso e-book exclusivo e aprenda, de forma prática, como posicionar sua marca, atrair o público certo e vender com autoridade.</p>
-    <p style="margin-top: 1rem; text-align: center;">
-      <a href="https://pay.kiwify.com.br/ZMcGoW2" style="background-color: #FF5C00; color: #000; padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; border-radius: 5px;">Comprar E-book</a>
-    </p>
-  </section>
-
-  <section id="beneficios" class="section">
-    <h3>Por que aplicar o Método PHP?</h3>
-    <ul>
-      <li>✅ Aumente a conversão de suas campanhas.</li>
-      <li>✅ Torne sua marca mais desejada e valorizada.</li>
-      <li>✅ Atraia o cliente certo sem esforço.</li>
-      <li>✅ Economize tempo e invista com inteligência.</li>
-    </ul>
-  </section>
-
-  <section class="cta" id="contato">
-    <h3>Quer aplicar o PHP no seu negócio?</h3>
-    <p>Clique abaixo e fale com nossa equipe para saber mais sobre mentorias, cursos e treinamentos.</p>
-    <br>
-    <a href="https://wa.me/5583987431813" target="_blank">Quero saber mais</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Método PHP. Desenvolvido por Gabriel. <br> Todos os direitos reservados.</p>
-    <p>Este site não é afiliado ao Facebook ou Google. Os resultados podem variar de pessoa para pessoa. Leia nossos <a href="#" style="color:#FF5C00; text-decoration: underline;">termos de uso</a> e <a href="#" style="color:#FF5C00; text-decoration: underline;">política de privacidade</a>.</p>
-  </footer>
+  <div class="background">
+    <div class="overlay">
+      <h1>Gabriel Silva</h1>
+      <p>Especialista em Marketing Digital e Programação Neurolinguística. Descubra seu verdadeiro potencial.</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqzLoSgyyFCuGn3cW2bOnBHF8zAC2MlqPNg59d7Vzfs3IDeQ/viewform?embedded=true" loading="lazy">Carregando…</iframe>
+    </div>
+  </div>
 </body>
 </html>
